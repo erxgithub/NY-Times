@@ -1,0 +1,73 @@
+/* fonts.css (Eric Gregor) */
+
+/* OpenSans fonts */
+
+@font-face {
+	font-family: OpenSans-Bold;
+	src: url("../../assets/fonts/opensans-bold.ttf");
+}
+
+@font-face {
+	font-family: OpenSans-BoldItalic;
+	src: url("../../assets/fonts/opensans-bolditalic.ttf");
+}
+
+@font-face {
+	font-family: OpenSans-Light;
+	src: url("../../assets/fonts/opensans-light.ttf");
+}
+
+@font-face {
+	font-family: OpenSans-LightItalic;
+	src: url("../../assets/fonts/opensans-lightitalic.ttf");
+}
+
+.opensans-bold {
+	font-family: OpenSans-Bold, Serif;	
+}
+
+.opensans-bolditalic {
+	font-family: OpenSans-BoldItalic, Serif;	
+}
+
+.opensans-light {
+	font-family: OpenSans-Light, Serif;	
+}
+
+.opensans-lightitalic {
+	font-family: OpenSans-LightItalic, Serif;	
+}
+
+/* font colours */
+
+.color-white {
+	color: white;
+}
+
+.color-black {
+	color: black;
+}
+
+.color-grey {
+	color: grey;
+}
+
+.color-red {
+	color: red;
+}
+
+.color-blue {
+	color: blue;
+}
+
+.color-green {
+	color: green;
+}
+
+.color-yellow {
+	color: yellow;
+}
+
+.color-orange {
+	color: orange;
+}

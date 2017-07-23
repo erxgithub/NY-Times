@@ -1,0 +1,53 @@
+<!-- index.html (Eric Gregor) -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NY Times</title>
+		<!-- <link type="text/css" rel="stylesheet" href="./comp/scss/reset.css" />
+		<link type="text/css" rel="stylesheet" href="./comp/scss/flex.css" />
+		<link type="text/css" rel="stylesheet" href="./comp/scss/theme.css" />
+		<link type="text/css" rel="stylesheet" href="./comp/scss/responsive.css" />
+		<link type="text/css" rel="stylesheet" href="./comp/scss/fonts.css" /> -->
+		<link type="text/css" rel="stylesheet" href="./dist/css/build.css" />
+	</head>
+	<body class="page-color">
+		<header >
+			<div class="flex flex-column flex-justify-center flex-items-center header-mobile header-tablet header-desktop">
+				<!-- logo -->
+				<div class="flex flex-column flex-items-center">
+					<img src="./assets/images/nyt-logo.svg" class="flex flex-justify-center flex-items-center logo-mobile logo-tablet logo-desktop" />
+				</div>
+				<!-- section dropdown -->
+				<div class="section-mobile section-tablet section-desktop">
+					<div class="section-heading opensans-light">
+						<h3>Choose a section:</h3>
+					</div>
+					<div>
+						<select id="sections"></select>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="flex flex-row flex-wrap opensans-light">
+				<div class="flex flex-row flex-wrap">
+					<!-- clone used for stories -->
+					<div id="clone" class="flex flex-column story-box-mobile story-box-tablet story-box-desktop">
+						<img src="" />
+						<a></a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer-mobile footer-tablet footer-desktop">
+			<div class="opensans-light">
+				<p>&copy Copyright 2016 INSTANEWS</p>
+			</div>
+			<!-- Google CDN for jQuery -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<!-- JavaScript -->
+			<!-- <script type="text/javascript" src="./comp/js/script.js"></script> -->
+			<script type="text/javascript" src="./dist/js/build.js"></script>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+/* theme.css (Eric Gregor) */
+
+.page-color {
+	color: white;
+	background-color: black;
+}
+
+.header-mobile {
+	width: 100%;
+	margin: 1rem 0 3rem 0;
+}
+
+
+.logo-mobile {
+	width: 70%;
+	margin: 1rem 0 0 0;
+}
+
+.section-heading {
+	font-size: 0.8rem;
+	margin: 0 0 1rem 0;
+}
+
+.section-mobile {
+	margin: 1rem 0 0 2rem;
+}
+
+.story-box-mobile {
+	position: relative;
+	width: 100%;
+}
+
+.story-box-mobile img {
+	width: 100%;
+}
+
+.story-box-mobile a {
+	position: absolute;
+	bottom: 0;
+	opacity: 0.6;
+	background-color: black;
+	line-height: 1.5rem;
+	text-decoration: none;
+	color: white;
+}
+
+.story-box-mobile a:hover {
+	text-decoration: underline;
+}
+
+#clone {
+	display: none;
+}
+
+.footer-mobile {
+	text-align: center;
+	margin: 2rem 0 3rem 0;
+	opacity: 0.8;
+	font-size: 0.9rem;
+}

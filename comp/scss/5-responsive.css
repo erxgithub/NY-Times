@@ -1,0 +1,58 @@
+/* responsive.css (Eric Gregor) */
+
+/* tablet responsive */
+
+@media only screen and (min-width: 600px) and (max-width: 1239px) {
+	.header-tablet {
+		flex-direction: row;
+		margin: 1rem 0 3rem 0;
+	}
+
+	.logo-tablet {
+		display: initial;
+		width: 40%;
+	}
+
+	.section-tablet {
+		margin: 1rem 0 0 2rem;
+	}
+
+	.story-box-tablet {
+		width: 33.33%;
+	}
+
+	.footer-tablet {
+		text-align: center;
+		margin: 3rem 0 4rem 0;
+		opacity: 0.8;
+	}
+}
+
+/* desktop responsive */
+
+@media only screen and (min-width: 1240px) {
+	.header-desktop {
+		flex-direction: row;
+		justify-content: flex-start;
+		margin: 1rem 0 2rem 0;
+	}
+
+	.logo-desktop {
+		display: initial;
+		width: 40%;
+	}
+
+	.section-desktop {
+		margin: 1rem 0 0 2rem;
+	}
+
+	.story-box-desktop {
+		width: 25%;
+	}
+
+	.footer-desktop {
+		text-align: left;
+		margin: 3rem 0 4rem 3rem;
+		opacity: 0.8;
+	}
+}
