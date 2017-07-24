@@ -43,7 +43,9 @@ var topStories = {
 						.attr({"id": storyId})
 						.insertBefore('#clone');
 
-					$('#' + storyId + ' img').attr("src",result.results[i].multimedia[1].url);
+					//$('#' + storyId + ' img').attr("src",result.results[i].multimedia[1].url);
+					$('#' + storyId).css('background-image', 'url(' + result.results[i].multimedia[2].url + ')');
+
 					$('#' + storyId + ' a').html(result.results[i].abstract);
 					$('#' + storyId + ' a').attr("href",result.results[i].url);
 				}
