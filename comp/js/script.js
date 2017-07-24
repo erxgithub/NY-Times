@@ -18,8 +18,10 @@ var topStories = {
 		var section = document.getElementById("sections").value;
 
 		if (section.length == 0) {
-			// if no section provided, just reload the page to clear the stories
+			// if no section provided, then just reload the page to clear the stories
+
 			location.reload();
+
 			return;
 		}
 
@@ -33,6 +35,15 @@ var topStories = {
 		}).done(function(result) {
 			var i;
 			var storyId;
+			var storyCount;
+
+			// remove any previously inserted content to make sure that it doesn't interfere with new content
+
+			$('.story-box').remove();
+
+			// insert new content
+
+			storyCount = 0;
 
 			for (i = 0; i < result.results.length; i++)
 			{
@@ -43,11 +54,18 @@ var topStories = {
 						.attr({"id": storyId})
 						.insertBefore('#clone');
 
-					//$('#' + storyId + ' img').attr("src",result.results[i].multimedia[1].url);
+					$('#' + storyId).addClass('story-box'); // add class to help identify inserted content
 					$('#' + storyId).css('background-image', 'url(' + result.results[i].multimedia[2].url + ')');
-
 					$('#' + storyId + ' a').html(result.results[i].abstract);
 					$('#' + storyId + ' a').attr("href",result.results[i].url);
+
+					storyCount += 1;
+
+					// limit the number of stories to 12
+
+					if (storyCount >= 12) {
+						break;
+					}
 				}
 			}
 		}).fail(function(err) {
@@ -81,7 +99,7 @@ var sections = [
 	{value: "politics", description: "Politics"},
 	{value: "upshot", description: "Upshot"},
 	{value: "nyregion", description: "NY Region"},
-	{value: "business", description: "Busines"},
+	{value: "business", description: "Business"},
 	{value: "technology", description: "Technology"},
 	{value: "science", description: "Science"},
 	{value: "health", description: "Health"},
