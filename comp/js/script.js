@@ -14,6 +14,13 @@ var topStories = {
 		return url;
 	},
 
+	updateStory: function (storyId, story) {
+		$('#' + storyId).addClass('story-box'); // add class to help identify inserted content
+		$('#' + storyId).css('background-image', 'url(' + story.multimedia[4].url + ')');
+		$('#' + storyId + ' a').html(story.abstract);
+		$('#' + storyId + ' a').attr("href",story.url);
+	},
+
 	getStories: function () {
 		var section = document.getElementById("sections").value;
 
@@ -58,10 +65,7 @@ var topStories = {
 						.attr({"id": storyId})
 						.insertBefore('#clone');
 
-					$('#' + storyId).addClass('story-box'); // add class to help identify inserted content
-					$('#' + storyId).css('background-image', 'url(' + result.results[i].multimedia[4].url + ')');
-					$('#' + storyId + ' a').html(result.results[i].abstract);
-					$('#' + storyId + ' a').attr("href",result.results[i].url);
+					topStories.updateStory(storyId, result.results[i]);
 
 					storyCount += 1;
 
