@@ -37,6 +37,10 @@ var topStories = {
 			var storyId;
 			var storyCount;
 
+			// remove super size logo when section selected in dropdown
+
+			$('header div div img').removeClass('logo-super-mobile logo-super-tablet logo-super-desktop');
+
 			// remove any previously inserted content to make sure that it doesn't interfere with new content
 
 			$('.story-box').remove();
@@ -55,7 +59,7 @@ var topStories = {
 						.insertBefore('#clone');
 
 					$('#' + storyId).addClass('story-box'); // add class to help identify inserted content
-					$('#' + storyId).css('background-image', 'url(' + result.results[i].multimedia[2].url + ')');
+					$('#' + storyId).css('background-image', 'url(' + result.results[i].multimedia[4].url + ')');
 					$('#' + storyId + ' a').html(result.results[i].abstract);
 					$('#' + storyId + ' a').attr("href",result.results[i].url);
 
@@ -77,7 +81,7 @@ var topStories = {
 window.onload = function () {
 	// check if jQuery loaded
 
-    if (!window.jQuery) { 
+    if (!window.jQuery) {
     	console.log("jQuery not loaded");
     }
 
